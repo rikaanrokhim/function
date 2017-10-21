@@ -24,7 +24,6 @@ Adalah fungsi yang secara default telah disediakan oleh PHP. Dikelompokkan sebag
 
 * Sintag
 ```php
-<?php
     //definisi fungsi
     function writeMsg()
     {
@@ -38,7 +37,6 @@ Adalah fungsi yang secara default telah disediakan oleh PHP. Dikelompokkan sebag
 
 * Sintag
 ```php
-<?php
     function addFunction($no1, $no2)
     {
         $jumlah = $no1 + $no2;
@@ -54,7 +52,6 @@ contoh:
 
 * Sintag
 ``php
-<?php
     // Tanpa argumen
     function nama_bulan() 
     {
@@ -66,17 +63,15 @@ contoh:
 Contoh berikutnya definisikan argumen, sehingga  dapat mencetak nama bulan sesuai dengan yang dinginkan:
 
 ```php
-<?php
     function nama_bulan($bulan) 
     {
         echo $bulan;
     }
     nama_bulan('Januari'); // Hasil Januari
-
+```
 Lebih lanjut, argumen dari fungsi ini dapat didefinisikan lebih dari satu, caranya, pisahkan argumen dengan tanda koma, contoh:
 
 ```php
-<?php
     function nama_bulan($bulan, $tahun) 
     {
         echo $bulan . ' ' . $tahun;
@@ -89,12 +84,12 @@ Lebih lanjut, argumen dari fungsi ini dapat didefinisikan lebih dari satu, caran
 Kita dapat mendefinisikan nilai default dari argumen, sehingga memudahkan pemanggilan fungsi karena tidak perlu menulis argumen terlalu banyak, contoh:
 
 ```php
-<?php
     function nama_bulan($bulan, $tahun = 2016) 
     {
         echo $bulan . ' ' . $tahun;
     }
     nama_bulan('Januari'); // Hasil Januari 2016
+```
 Nilai default argumen ini bisa kita isi tipe data apa saja seperti boelan (true, false), null, array, object, dll
 
 ## Nilai Kembalian – Return Value
@@ -105,7 +100,6 @@ Nilai kembalian ini maksudnya fungsi yang kita panggil tadi akan menghasilkan ni
 Nilai kembalian ini dijalankan dengan menggunakan keyword `return`, contoh:
 
 ```php
-<?php
     function nama_bulan($bulan) 
     {
         $nama_bulan = array (1 => 'Januari', 2 => 'Februari', 3 => 'Maret');
@@ -119,8 +113,6 @@ Nilai kembalian ini dijalankan dengan menggunakan keyword `return`, contoh:
 * Return value lebih dari satu nilai
 
 ``php
-<?php
-?php
     function nama_bulan($bulan) 
     {
         $nama_bulan = array (1 => 'Januari', 2 => 'Februari', 3 => 'Maret');
