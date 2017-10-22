@@ -22,7 +22,6 @@ Adalah fungsi yang secara default telah disediakan oleh PHP. Dikelompokkan sebag
 
 ## Menulis Fungsi PHP
 
-* Sintag
 ```php
     //definisi fungsi
     function writeMsg()
@@ -35,7 +34,6 @@ Adalah fungsi yang secara default telah disediakan oleh PHP. Dikelompokkan sebag
 
 ## Fungsi PHP dengan Parameter
 
-* Sintag
 ```php
     function addFunction($no1, $no2)
     {
@@ -50,14 +48,12 @@ Adalah fungsi yang secara default telah disediakan oleh PHP. Dikelompokkan sebag
 Argumen fungsi ditulis dalam tanda kurung dan dapat berupa tipe data apapun baik string, array, object, boelan, dsb.., selain itu argumen juga dapat dikosongkan, 
 contoh:
 
-* Sintag
-``php
-    // Tanpa argumen
+```php
     function nama_bulan() 
     {
         echo 'Agustus';
     }
-    nama_bulan(); // Hasil Agustus
+    nama_bulan(); //Hasil Agustus
 ```
 
 Contoh berikutnya definisikan argumen, sehingga  dapat mencetak nama bulan sesuai dengan yang dinginkan:
@@ -69,15 +65,6 @@ Contoh berikutnya definisikan argumen, sehingga  dapat mencetak nama bulan sesua
     }
     nama_bulan('Januari'); // Hasil Januari
 ```
-Lebih lanjut, argumen dari fungsi ini dapat didefinisikan lebih dari satu, caranya, pisahkan argumen dengan tanda koma, contoh:
-
-```php
-    function nama_bulan($bulan, $tahun) 
-    {
-        echo $bulan . ' ' . $tahun;
-    }
-    nama_bulan('Januari', 2016); // Hasil Januari 2016
-```
 
 ## Nilai Default Argumen
 
@@ -88,7 +75,7 @@ Kita dapat mendefinisikan nilai default dari argumen, sehingga memudahkan pemang
     {
         echo $bulan . ' ' . $tahun;
     }
-    nama_bulan('Januari'); // Hasil Januari 2016
+    nama_bulan('Januari'); //Hasil Januari 2016
 ```
 Nilai default argumen ini bisa kita isi tipe data apa saja seperti boelan (true, false), null, array, object, dll
 
@@ -98,6 +85,7 @@ Nilai default argumen ini bisa kita isi tipe data apa saja seperti boelan (true,
 
 Nilai kembalian ini maksudnya fungsi yang kita panggil tadi akan menghasilkan nilai tertentu, nilai tersebut bisa bertipe apa jasa seperti: boelan, float, array, object, dll
 Nilai kembalian ini dijalankan dengan menggunakan keyword `return`, contoh:
+
 
 ```php
     function nama_bulan($bulan) 
@@ -112,7 +100,7 @@ Nilai kembalian ini dijalankan dengan menggunakan keyword `return`, contoh:
 
 * Return value lebih dari satu nilai
 
-``php
+```php
     function nama_bulan($bulan) 
     {
         $nama_bulan = array (1 => 'Januari', 2 => 'Februari', 3 => 'Maret');
@@ -132,7 +120,6 @@ Fungsi ini umumnya digunakan pada fungsi-fungsi yang membutuhkan callback (fungs
 Fungsi yang membutuhkan callback ini bisa built-in function seperti preg_replcace_callback, array_map, array_walk, dll maupun user-defined function.
 
 ```php
-<?php
 $kendaraan  = array('Mobil', 'Motor', 'Sepeda');
 $upper      = array_map('toupper', $kendaraan);
 function toupper($array_val) 
