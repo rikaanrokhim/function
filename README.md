@@ -59,11 +59,11 @@ contoh:
 Contoh berikutnya definisikan argumen, sehingga  dapat mencetak nama bulan sesuai dengan yang dinginkan:
 
 ```php
-    function nama_bulan($bulan) 
+    function namaBulan($bulan) 
     {
         echo $bulan;
     }
-    nama_bulan('Januari'); // Hasil Januari
+    namaBulan('Januari'); // Hasil Januari
 ```
 
 ## Nilai Default Argumen
@@ -71,11 +71,11 @@ Contoh berikutnya definisikan argumen, sehingga  dapat mencetak nama bulan sesua
 Kita dapat mendefinisikan nilai default dari argumen, sehingga memudahkan pemanggilan fungsi karena tidak perlu menulis argumen terlalu banyak, contoh:
 
 ```php
-    function nama_bulan($bulan, $tahun = 2016) 
+    function namaBulan($bulan, $tahun = 2016) 
     {
         echo $bulan . ' ' . $tahun;
     }
-    nama_bulan('Januari'); //Hasil Januari 2016
+    namaBulan('Januari'); //Hasil Januari 2016
 ```
 Nilai default argumen ini bisa kita isi tipe data apa saja seperti boelan (true, false), null, array, object, dll
 
@@ -88,28 +88,28 @@ Nilai kembalian ini dijalankan dengan menggunakan keyword `return`, contoh:
 
 
 ```php
-    function nama_bulan($bulan) 
+    function namaBulan($bulan) 
     {
-        $nama_bulan = array (1 => 'Januari', 2 => 'Februari', 3 => 'Maret');
-        return $nama_bulan[$bulan];
+        $namaBulan = array [1 => 'Januari', 2 => 'Februari', 3 => 'Maret'];
+        return $namaBulan[$bulan];
     }
     // date('n') akan menghasilkan bulan sekarang dalam bentuk 1 digit, misal 3 untuk Januari
-    $bulan = nama_bulan(date('n')); // Hasil Maret 
+    $bulan = namaBulan(date('n')); // Hasil Maret 
         echo $bulan . ' ' . date('Y'); // Hasil Maret 2016
 ```
 
 * Return value lebih dari satu nilai
 
 ```php
-    function nama_bulan($bulan) 
+    function namaBulan($bulan) 
     {
-        $nama_bulan = array (1 => 'Januari', 2 => 'Februari', 3 => 'Maret');
+        $namaBulan = array [1 => 'Januari', 2 => 'Februari', 3 => 'Maret'];
         $semester   = $bulan < 7 ? 1 : 2;
-        return array('bulan' => $nama_bulan[$bulan],
+        return array('bulan' => $namaBulan[$bulan],
                     'semester' => $semester
                 );
     }
-    $bulan = nama_bulan(3);
+    $bulan = namaBulan(3);
         echo '<pre>'; print_r($bulan);
 ```
 
@@ -120,13 +120,16 @@ Fungsi ini umumnya digunakan pada fungsi-fungsi yang membutuhkan callback (fungs
 Fungsi yang membutuhkan callback ini bisa built-in function seperti preg_replcace_callback, array_map, array_walk, dll maupun user-defined function.
 
 ```php
-$kendaraan  = array('Mobil', 'Motor', 'Sepeda');
-$upper      = array_map('toupper', $kendaraan);
-function toupper($array_val) 
+function test($callback)
 {
-    return strtoupper($array_val);
+	echo 'Hai ' . $callback();
 }
-    echo '<pre>'; print_r($upper);
+ 
+test(function()
+{
+	$x = 10;
+	return ($x + 1);
+});
 ```
 
 ## Fungsi String
@@ -138,7 +141,7 @@ Nama Fungsi | Keterangan
 `strlen()` | Digunakan untuk mengetahui jumlah karakter dalam suatu string (teks)
 `strstr()` | Mengambil suatu string mulai posisi setelah suatu substring, case sensitive
 `stristr()` | Strstr, tidak case sensitive
-`strchr()` | Sama dengan strstr()
+`strchr()` | Sama dengan `strstr()`
 `substr()` | Digunakan untuk mengambil sebagian string
 `trim()` | Menghilangkan spasi sebelum huruf pertama string dan sesudah huruf terakhir string
 `ltrim()` | Menghilangkan spasi sebelum huruf pertama string (kiri)
