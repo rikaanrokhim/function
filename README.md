@@ -135,20 +135,20 @@ Daftar Fungsi yang Sering digunakan :
 
 Nama Fungsi | Keterangan
 ----------- | ----------
-`Strlen()` | Digunakan untuk mengetahui jumlah karakter dalam suatu string (teks)
-`Strstr()` | Mengambil suatu string mulai posisi setelah suatu substring, case sensitive
-`Stristr()` | Strstr, tidak case sensitive
-`Strchr()` | Sama dengan strstr()
-`Substr()` | Digunakan untuk mengambil sebagian string
-`Trim()` | Menghilangkan spasi sebelum huruf pertama string dan sesudah huruf terakhir string
-`Ltrim()` | Menghilangkan spasi sebelum huruf pertama string (kiri)
-`Rtrim()` | Menghilangkan spasi sesudah huruf  terakhir string (kanan)
-`Strtolower()`| Seluruh string menjadi huruf kecil
-`Strtoupper()` | Seluruh string menjadi huruf kapital
-`Ucfirst()` | Awal string menjadi huruf kapital
-`Strrev()` | Membalik urutan string
-`Str_replace()` | Menganti sebagian string yang dicari dengan string lain
-`Strcmp()` | Membandingkan biner dua string, case sensitive
+`strlen()` | Digunakan untuk mengetahui jumlah karakter dalam suatu string (teks)
+`strstr()` | Mengambil suatu string mulai posisi setelah suatu substring, case sensitive
+`stristr()` | Strstr, tidak case sensitive
+`strchr()` | Sama dengan `strstr()`
+`substr()` | Digunakan untuk mengambil sebagian string
+`trim()` | Menghilangkan spasi sebelum huruf pertama string dan sesudah huruf terakhir string
+`ltrim()` | Menghilangkan spasi sebelum huruf pertama string (kiri)
+`rtrim()` | Menghilangkan spasi sesudah huruf  terakhir string (kanan)
+`strtolower()`| Seluruh string menjadi huruf kecil
+`strtoupper()` | Seluruh string menjadi huruf kapital
+`ucfirst()` | Awal string menjadi huruf kapital
+`strrev()` | Membalik urutan string
+`str_replace()` | Menganti sebagian string yang dicari dengan string lain
+`strcmp()` | Membandingkan biner dua string, case sensitive
 
 ## Link Belajar
 
